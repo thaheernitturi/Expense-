@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/expense.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+  <!-- 🔝 TOP BAR -->
+  <div class="top-bar">
+    <h2>Dashboard</h2>
+     <button id="reportBtn" onclick="goReport()">Reports</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- 👋 GREETING -->
+  <h2>Welcome Back </h2>
+  <h3 id="premium"></h3>
+
+  <!-- 📦 GRID -->
+  <div class="grid">
+
+    <!-- 💰 ADD EXPENSE -->
+    <div class="card">
+      <h3>Add Expense</h3>
+      <form id="expense-form">
+        <input type="number" id="amount" placeholder="Amount" required />
+        <input type="text" id="description" placeholder="Description" required />
+        <input type="text" id="category" placeholder="Category" readonly />
+        <button>Add Expense</button>
+      </form>
+    </div>
+
+    <!-- 📊 EXPENSE LIST -->
+    <div class="card">
+      <h3>Recent Expenses</h3>
+      <ul id="list"></ul>
+    </div>
+
+    <!-- 🏆 LEADERBOARD -->
+    <div class="card">
+  <h3>Leaderboard</h3>
+
+  <button id="buyPremium">Buy Premium</button>
+  <button onclick="showLeaderboard()">Show</button>
+
+  
+  <div id="top3"></div>
+
+  
+  <ul id="leaderboard"></ul>
+</div>
+<!-- 🧠 AI INSIGHTS -->
+<div class="card">
+  <h3>AI Insights 🧠</h3>
+  <p id="insight">Loading insights...</p>
+</div>
+
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/expense.js"></script>
+
+<script>
+function logout() {
+  localStorage.removeItem("token");
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

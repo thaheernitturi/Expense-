@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Forgot Password</h2>
+<link rel="stylesheet" href="css/style.css">
+<form id="forgot">
+  <input type="email" id="email" required />
+  <button>Send</button>
+</form>
+
+<script>
+document.getElementById("forgot").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  await fetch("http://localhost:3000/password/forgotpassword", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({ email: email.value }),
+  });
+
+  alert("Email sent");
+});
+</script>
+
+</body>
+</html>

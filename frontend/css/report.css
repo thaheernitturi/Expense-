@@ -1,0 +1,64 @@
+body {
+  font-family: "Poppins", sans-serif;
+
+  background: radial-gradient(circle at 20% 20%, #c77dff, transparent 40%),
+              radial-gradient(circle at 80% 80%, #ffb70333, transparent 40%),
+              linear-gradient(135deg, #0f051d, #2d1e4a);
+
+  color: white;
+  padding: 30px;
+}
+
+/* container */
+.dashboard {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* top */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* buttons */
+.top-bar button,
+.filters button,
+#downloadBtn {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+
+  background: linear-gradient(135deg,#c77dff,#9b5de5);
+  color: white;
+  cursor: pointer;
+}
+
+/* disabled */
+#downloadBtn:disabled {
+  background: gray;
+}
+
+/* card */
+.card {
+  background: rgba(255,255,255,0.08);
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(25px);
+}
+
+/* table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: rgba(255,255,255,0.1);
+}
+
+td, th {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}

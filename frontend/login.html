@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body>
+
+<div class="top-btn">
+  <button onclick="goSignup()">Signup</button>
+</div>
+
+<div class="card">
+  
+  <h2>Login</h2>
+
+  <form id="login-form">
+    <div class="input-group">
+      <input type="email" id="email" placeholder="Email" required />
+    </div>
+
+    <div class="input-group">
+      <input type="password" id="password" placeholder="Password" required />
+    </div>
+
+    <button>Sign In</button>
+  </form>
+
+  <a href="forgot.html">Forgot Password?</a>
+</div>
+
+<script src="js/auth.js"></script>
+
+<script>
+function goSignup() {
+  window.location.href = "signup.html";
+}
+</script>
+
+</body>
+</html>

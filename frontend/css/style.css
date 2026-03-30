@@ -1,0 +1,171 @@
+/* 🌐 GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #f3e7ff, #e3d9ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 📦 MAIN CONTAINER */
+body > * {
+  width: 380px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(25px);
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* 🧾 HEADER */
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2d1e4a;
+  margin-bottom: 15px;
+}
+
+/* 👑 PREMIUM TEXT */
+#premium {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #9b5de5;
+  font-weight: 600;
+}
+
+/* ✍️ INPUT FIELDS */
+input {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 8px 0;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.8);
+  outline: none;
+  font-size: 14px;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* 🔘 BUTTONS */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 14px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #c77dff, #9b5de5);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* ✨ BUTTON HOVER */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(155, 93, 229, 0.3);
+}
+
+/* 💳 BUY PREMIUM SPECIAL */
+#buyPremium {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #5a189a;
+}
+
+/* 🏆 LEADERBOARD BUTTON */
+button:nth-of-type(2) {
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  color: #3c096c;
+}
+
+/* 📊 LIST STYLING */
+ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+/* 📦 LIST ITEM (CARD STYLE) */
+li {
+  background: rgba(255, 255, 255, 0.7);
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  transition: 0.2s;
+}
+
+/* 🪄 HOVER EFFECT */
+li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ❌ DELETE BUTTON */
+li button {
+  width: auto;
+  padding: 6px 10px;
+  background: #ff4d6d;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+li button:hover {
+  background: #c9184a;
+}
+
+/* 📊 LEADERBOARD */
+#leaderboard li {
+  font-weight: 600;
+  color: #5a189a;
+}
+
+/* 🔗 LINKS */
+a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #9b5de5;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 💡 SMALL TEXT */
+small {
+  color: gray;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 420px) {
+  body > * {
+    width: 90%;
+  }
+}
+/* 🔝 TOP BAR */
+.top-bar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.top-bar button {
+  padding: 8px 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg,#c77dff,#9b5de5);
+  color: white;
+}
