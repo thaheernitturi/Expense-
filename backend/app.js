@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 
 const userRoutes = require("./routes/userRoutes");
 const expenseRoutes = require("./routes/expenseRoutes");
@@ -20,13 +21,15 @@ app.use("/purchase", purchaseRoutes);
 app.use("/password", passwordRoutes);
 app.use("/report", reportRoutes);
 app.use("/leaderboard", leaderboardRoutes);
-app.use(express.static("frontend"));
+
+app.use(express.static(path.join(__dirname, "../frontend")));
+
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend/login.html"));
+    res.sendFile(path.join(__dirname, "../frontend/login.html"));
 });
 
 app.get("/test", (req, res) => {
-  res.send("Backend working");
+    res.send("Backend working");
 });
 
 module.exports = app;
